@@ -19,10 +19,10 @@ public class MovePlayer : MonoBehaviour
     {
        
         if(Input.GetKey(KeyCode.W)){
-            rb.velocity = new Vector3(0,0,1);
+            rb.velocity = new Vector3(0,0,1* MoveDuration);
         }
         if(Input.GetKey(KeyCode.S)){
-            rb.velocity = new Vector3(0,0,-1);
+            rb.velocity = new Vector3(0,0,-1* MoveDuration);
         }
         if(Input.GetKeyDown(KeyCode.Space)){
             rb.velocity = new Vector3(0,5,1);
