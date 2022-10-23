@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public GameOver gemover;
     [SerializeField] public GameObject menuPanel;
     [SerializeField] private AudioSource audio;
-    
+    [SerializeField] private GameObject timers;
     public float TimeLeft;
     public bool TimerOn =false;
     public Text TimerTxt;
@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-     
+        timers.SetActive(false);
         cameraScript.Initialize();
         
     }
@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         audio.Play();
         TimerOn = true;
+        timers.SetActive(true);
 
     }
     public void QuitGame(){
