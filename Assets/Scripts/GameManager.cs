@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     {
         timers.SetActive(false);
         cameraScript.Initialize();
-        
+        Time.timeScale = 0;
     }
 
     // Update is called once per frame
