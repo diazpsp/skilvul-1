@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CarChecker : MonoBehaviour
 {
     public bool carExist = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +18,15 @@ public class CarChecker : MonoBehaviour
     {
         
     }
+
     
+
+    void OnTriggerEnter(Collider coltrig){
+        carExist = true;
+       
+    }
+ 
+
     void OnTriggerStay(Collider coltrig){
         carExist = true;
     }

@@ -28,6 +28,9 @@ public class CarSpawner : MonoBehaviour
         if(currentTime > randomTime && carCek.carExist == false)
         {
         InstantiateCar();
+        }else
+        {
+            
         }
     }
     
